@@ -17,13 +17,10 @@ Route::get('/', function () {
 });
 
 
-
 Route::get('index/home', function () {
     //return view('welcome');
     return view("home");
 });
 
 
-Route::get('teste', function () {
-    return view("teste");
-});
+

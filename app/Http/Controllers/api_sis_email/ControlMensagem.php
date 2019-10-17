@@ -44,6 +44,7 @@ class ControlMensagem extends Controller
             Receber por post assunto, corpo, tipo_destinatário e id_remetente e id_destinatario.
             Ordem de criação dos registros: caixa de msgs, mensagem, destinatário e msg_x_destinatario.
         */
+
         $mensagem = $request->all();
        
         $assunto = $mensagem['assunto'];

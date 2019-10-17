@@ -1,9 +1,11 @@
+
 <!DOCTYPE html>
 <html>
 <head>
     <title>Projeto BD2</title>  
 </head>
 <body>
+
     <form id="cadastro">
         <input id="nome" type="text" name="nome" placeholder="Primeiro nome" required/><br/>
         <input id="sobrenome" type="text" name="sobrenome" placeholder="Sobrenome" required/><br/>
@@ -97,6 +99,6 @@
                 xhttp.send(json);
             
         });
-    </script> 
+
 </body>
 </html>
