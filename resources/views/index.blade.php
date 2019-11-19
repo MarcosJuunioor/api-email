@@ -34,7 +34,8 @@
 
         formCadastro.addEventListener("submit",function(e){ // Adicionando evento ao submeter cadastro
             e.preventDefault(); // Previne ação padrão de submissão
-
+            console.log(senha);
+            console.log(confirmarSenha);
             if(document.getElementById("senha").value == document.getElementById("confirmarSenha").value){
                 // Criação do objeto a ser tratado e enviado para o servidor
                 var obj1 ={         
@@ -82,9 +83,16 @@
                 var xhttp = new XMLHttpRequest();
                 xhttp.onreadystatechange = function () {
                     if (this.readyState == 4 && this.status == 200) {
-                        console.log(this.status);
-                        //alert("ENTREI =D O token é: "+this.responseText);
-                        window.location = "index/home";
+                        
+                        if(this.responseText == 0){
+                            alert("O token recebido é: "+this.responseText+". Verifique usuário e a senha!");
+                        }else{
+                            alert("O token recebido é: "+this.responseText+". Token armazenado!");
+                            sessionStorage.setItem("token",this.responseText);
+                            alert("ENTREI =D !!! O token armazenado foi: "+sessionStorage.getItem("token"));
+                            window.location = "index/home";
+                        }
+                        
                     }
 
                     if (this.readyState == 4 && this.status != 200) {
@@ -99,6 +107,7 @@
                 xhttp.send(json);
             
         });
+    </script>   
 
 </body>
 </html>
