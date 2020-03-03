@@ -116,8 +116,8 @@ Método a ser implementado...
 #### Mover uma Mensagem 
 Método a ser implementado...
 
-
-
+## Linguagens e Framework
+O projeto foi desenvolvido em PHP com o uso do Framework Laravel. O SGBD utilizado foi o Postgres SQL.
 
 
 
